@@ -10,7 +10,11 @@
 </head>
 <body>
     {% include 'components/header.html' %}
-    <main>{% block content%}{% endblock content %}</main>
+    <main>
+        <div>
+            {% block content%}{% endblock content %}
+        </div>
+    </main>
     {% include 'components/footer.html' %}
 </body>
 </html>
