@@ -1,0 +1,32 @@
+{% extends "components/layout.html" %}
+
+{% load static %}
+
+
+{% block title %}Главная{% endblock title %}
+
+
+
+{% block content %}
+<section class="achievements_page__wrapper">
+    <div class="container">
+        <div class="achievements_page">
+            <h2>ДОСТИЖЕНИЯ КОМПАНИИ ЗА 2021-2023 ГОДА</h2>
+            <div class="achievements__list">
+                <div class="achievements__item">
+                    <img src="{% static "/achievements_page/1.png" %}">
+                    <p>Наша компания получила данную награду за продвижение в газодобывающей отрасли в 2021 году. На тот момент переда нами стояла задача сделать наше предприятие узнаваемым и мобильным.</p>
+                </div>
+                <div class="achievements__item">
+                    <img src="{% static "/achievements_page/2.png" %}">
+                    <p>Наша компания получила данную награду за продвижение в газодобывающей отрасли в 2018 году. Было организовано проектирование строительного комплекса.</p>
+                </div>
+                <div class="achievements__item">
+                    <img src="{% static "/achievements_page/3.png" %}">
+                    <p>Наша компания получила данную награду за продвижение в газодобывающей отрасли в 2022 году, как лучшее предприятие отрасли года.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

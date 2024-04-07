@@ -1,5 +1,8 @@
 {% extends "components/layout.html" %}
 
+{% load static %}
+
+
 {% block title %}Главная{% endblock title %}
 
 
@@ -14,7 +17,12 @@
                 <h3>Мы занимаемся проектированием в области газовой промышленности. Наш профессионализм - Наше гарантия </h3>
             </div>
             <div class="hero__carousel">
-    
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="{% static "/carousel/1.png" %}"></div>
+                        <div class="swiper-slide"><img src="{% static "/completed/2.png" %}"></div>
+                        <div class="swiper-slide"><img src="{% static "/completed/3.png" %}"></div>
+                    </div>
+                
             </div>
         </div>
     </div>
@@ -24,19 +32,19 @@
         <h2 class="section__title">Примеры готовых работ</h2>
         <div class="examples">
             <div class="example__block">
-                <img src="/">
+                <img src="{% static "/completed/1.png" %}">
                 <div class="title">Обустройство Салманского (Утреннего) НГКМ в рамках проекта “Арктик СПГ-2”</div>
             </div>
             <div class="example__block">
-                <img src="/">
+                <img src="{% static "/completed/2.png" %}">
                 <div class="title">Расширение Пунгинского ПХГ</div>
             </div>
             <div class="example__block">
-                <img src="/">
+                <img src="{% static "/completed/3.png" %}">
                 <div class="title">Обустройство Верхнетиутейского и Западно-Сеяхинского месторождений в рамках проекта "Обский ГХК"</div>
             </div>
             <div class="example__block">
-                <img src="/">
+                <img src="{% static "/completed/4.png" %}">
                 <div class="title">Обустройство Южно-Русского НГМ</div>
             </div>
         </div>
@@ -48,42 +56,42 @@
         <div class="business__blocks">
             <div class="business__block">
                 <div class="business__block__icon">
-                    <img>
+                    <img src="{% static "/business/1.svg" %}">
                 </div>
                 <div>
                     <h3>Концептуальное проектирование, оцека эффективности и рисков</h3>
                     <p>Наша компания решает множество проблем, которые могут появиться в процессе проектирования. Перед началом проектирования Мы производим оценку эффективности и рисков ...</p>
-                    <button>Развернуть</button>
+                    <a href="/services"><button>Развернуть</button></a>
                 </div>
             </div>
             <div class="business__block">
                 <div class="business__block__icon">
-                    <img>
+                    <img src="{% static "/business/2.svg" %}">
                 </div>
                 <div>
                     <h3>Архитектурно-строительное проектирование</h3>
                     <p>Проектируем объекты обустройства газовых, нефтегазовых и нефтегазоконденсатных месторождений, объекты магистрального трубопроводного транспорта ...</p>
-                    <button>Развернуть</button>
+                    <a href="/services"><button>Развернуть</button></a>
                 </div>
             </div>
             <div class="business__block">
                 <div class="business__block__icon">
-                    <img>
+                    <img src="{% static "/business/3.svg" %}">
                 </div>
                 <div>
                     <h3>Комплексные инженерные изыскания</h3>
                     <p>Выполнение комплекса инженерных изысканий для строительства, включая: Сбор исходных данных, геодезичиское изыскания, геогологические изыскания ...</p>
-                    <button>Развернуть</button>
+                    <a href="/services"><button>Развернуть</button></a>
                 </div>
             </div>
             <div class="business__block">
                 <div class="business__block__icon">
-                    <img>
+                    <img src="{% static "/business/4.svg" %}">
                 </div>
                 <div>
                     <h3>Авторский надзор за строительством и оказание консультационных услуг</h3>
                     <p>Авторское сопровождение запроектированных объектов на протяжении всего их жизненного цикла, включая: авторский надзор в период строительства ...</p>
-                    <button>Развернуть</button>
+                    <a href="/services"><button>Развернуть</button></a>
                 </div>
             </div>
         </div>
@@ -99,19 +107,19 @@
             </div>
             <div class="achievements_icons">
                 <div>
-                    <img>
+                    <img src="{% static "/achievements/3.svg" %}">
                     <p>Более 40 завершенных проетов</p>
                 </div>
                 <div>
-                    <img>
+                    <img src="{% static "/achievements/4.svg" %}">
                     <p>Партнерство с титанами газовой индустрии</p>
                 </div>
                 <div>
-                    <img>
+                    <img src="{% static "/achievements/1.svg" %}">
                     <p>Современный подход к разработке проектов</p>
                 </div>
                 <div>
-                    <img>
+                    <img src="{% static "/achievements/2.svg" %}">
                     <p>Более 650 квалифицированных специалистов</p>
                 </div>
             </div>

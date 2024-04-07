@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title%}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static "style.css" %}">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 </head>
 <body>
     {% include 'components/header.html' %}
@@ -16,5 +20,21 @@
         </div>
     </main>
     {% include 'components/footer.html' %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+    const swiper = new Swiper('.hero__carousel', {
+      // Optional parameters
+      slidesPerView: 1,
+      speed: 400,
+      autoplay: {
+        delay: 5000,
+      },
+      loop: true,
+    
+    });
+    
+    </script>
 </body>
 </html>

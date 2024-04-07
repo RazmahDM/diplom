@@ -1,0 +1,40 @@
+{% extends "components/layout.html" %}
+
+{% load static %}
+
+
+{% block title %}Главная{% endblock title %}
+
+
+
+{% block content %}
+<section class="contacts_page__wrapper">
+    <div class="container">
+        <div class="contacts_page">
+            <div class="contacts__list">
+                <div>
+                    <h3>Офисы</h3>
+                    <p>проспект Буденновский, д 106/2, г. Ростов-на-Дону, Ростовская область.</p>
+                    <p>ул. Артема, д 169г, г. Донецк, Донецкая Народная Республика.</p>
+                </div>
+                <div>
+                    <h3>Факс</h3>
+                    <p>+7 (856) 206-64-20</p>
+                </div>
+                <div>
+                    <h3>Телефоны</h3>
+                    <p>+7 (856) 206-53-75</p>
+                    <p>+7 (856) 206-53-74</p>
+                </div>
+                <div>
+                    <h3>E-mail</h3>
+                    <p>ex@ungg.org</p>
+                </div>
+            </div>
+            <div>
+                <img src="{% static 'contacts.png' %}">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
