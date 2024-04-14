@@ -11,22 +11,114 @@
 <section class="achievements_page__wrapper">
     <div class="container">
         <div class="achievements_page">
-            <h2>ДОСТИЖЕНИЯ КОМПАНИИ ЗА 2021-2023 ГОДА</h2>
-            <div class="achievements__list">
-                <div class="achievements__item">
-                    <img src="{% static "/achievements_page/1.png" %}">
-                    <p>Наша компания получила данную награду за продвижение в газодобывающей отрасли в 2021 году. На тот момент переда нами стояла задача сделать наше предприятие узнаваемым и мобильным.</p>
+            <h2>ВИДЫ РАБОТ, ВЫПОЛНЯЕМЫЕ ИНСТИТУТОМ</h2>
+            <div class="projects__list">
+                <div class="projects__item">
+                   <div class="item__information">
+                        <h3>Обустройство Салманского (Утреннего) НГКМ в рамках проекта “Арктик СПГ-2”</h3>
+                        <span>Инвестор: ПАО “НОВАТЭК”
+                            Производительность УКПГ:
+                            - 29,7 млрд. м3/год по товарному газу
+                            - 1,514 млн. т/год по стабильному конденсату</span>
+                        <p>Проект предусматривает строительство трёх технологических линий по производству сжиженного природного газа мощностью 6,6 млн т в год каждая. Общая мощность трех линий составит 19,8 млн т СПГ и до 1,6 млн т стабильного газового конденсата в год.</p>
+                   </div>
+                   <div class="item__slider">
+                        <img>
+                   </div>
                 </div>
-                <div class="achievements__item">
-                    <img src="{% static "/achievements_page/2.png" %}">
-                    <p>Наша компания получила данную награду за продвижение в газодобывающей отрасли в 2018 году. Было организовано проектирование строительного комплекса.</p>
-                </div>
-                <div class="achievements__item">
-                    <img src="{% static "/achievements_page/3.png" %}">
-                    <p>Наша компания получила данную награду за продвижение в газодобывающей отрасли в 2022 году, как лучшее предприятие отрасли года.</p>
-                </div>
+                <div class="projects__item">
+                    <div class="item__information">
+                         <h3>Обустройство Салманского (Утреннего) НГКМ в рамках проекта “Арктик СПГ-2”</h3>
+                         <span>Инвестор: ПАО “НОВАТЭК”
+                             Производительность УКПГ:
+                             - 29,7 млрд. м3/год по товарному газу
+                             - 1,514 млн. т/год по стабильному конденсату</span>
+                         <p>Проект предусматривает строительство трёх технологических линий по производству сжиженного природного газа мощностью 6,6 млн т в год каждая. Общая мощность трех линий составит 19,8 млн т СПГ и до 1,6 млн т стабильного газового конденсата в год.</p>
+                    </div>
+                    <div class="item__slider">
+                         <img>
+                    </div>
+                 </div>
+                 <div class="projects__item">
+                    <div class="item__information">
+                         <h3>Обустройство Салманского (Утреннего) НГКМ в рамках проекта “Арктик СПГ-2”</h3>
+                         <span>Инвестор: ПАО “НОВАТЭК”
+                             Производительность УКПГ:
+                             - 29,7 млрд. м3/год по товарному газу
+                             - 1,514 млн. т/год по стабильному конденсату</span>
+                         <p>Проект предусматривает строительство трёх технологических линий по производству сжиженного природного газа мощностью 6,6 млн т в год каждая. Общая мощность трех линий составит 19,8 млн т СПГ и до 1,6 млн т стабильного газового конденсата в год.</p>
+                    </div>
+                    <div class="item__slider">
+                         <img>
+                    </div>
+                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section class="form">
+    <div class="container">
+        <h2>Форма для составления заявки</h2>
+        <form>
+            <div>
+                <div class="form__inputs">
+                    <div class="l">
+                        <h5>Персональные данные</h5>
+                        <input placeholder="Фамилия">
+                        <input placeholder="Имя">
+                        <input placeholder="Отчество">
+                        <h5>Контактные данные</h5>
+                        <input placeholder="+7 ()">
+                        <input placeholder="email@email.com">
+                        <h5>Деятельность</h5>
+                        <div class="input_group">
+                            <input id="type1" name="type" type="radio">
+                            <label for="type1">Частное лицо</label>
+                        </div>
+                        <div class="input_group">
+                            <input id="type2" name="type" type="radio">
+                            <label for="type2">Компания</label>
+                        </div>
+                        <textarea placeholder="Вид деятельности" rows="6"></textarea>
+                    </div>
+                    <div class="r">
+                        <h5>Обращение</h5>
+                        <input placeholder="Тема обращения">
+                        <textarea placeholder="Описание обращения" rows="6"></textarea>
+                        <h5>Вид услуг</h5>
+                        <div class="input_group">
+                            <input name="service" id="service1" type="checkbox">
+                            <label for="service1">Концептуальное проектирование</label>
+                        </div>
+                        <div class="input_group">
+                            <input name="service" id="service2" type="checkbox">
+                            <label for="service2">Инженерные изыскаяния</label>
+                        </div>
+                        <div class="input_group">
+                            <input name="service" id="service3" type="checkbox">
+                            <label for="service3">Сопровождение</label>
+                        </div>
+                        <div class="input_group">
+                            <input name="service" id="service4" type="checkbox">
+                            <label for="service4">Строительное проектирование</label>
+                        </div>
+                        <div class="input_group">
+                            <input name="service" id="service5" type="checkbox">
+                            <label for="service5">Другое</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input_group">
+                    <input id="soglasie" type="checkbox">
+                    <label for="soglasie">Я даю согласие на обработку персональных данных</label>
+                </div>
+                <button>Отправить на рассмотрение</button>
+            </div>
+            <div class="form__img">
+                <img src=" {% static 'form.png' %} ">
+            </div>
+        </form>
     </div>
 </section>
 {% endblock content %}
