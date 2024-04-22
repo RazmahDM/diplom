@@ -39,6 +39,7 @@ img {
     margin: 0 5%;
 }
 
+
 header {
     padding: 20px 0;
     width: 100%;
@@ -75,6 +76,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 .hero h2 {
@@ -98,7 +100,8 @@ header {
     height: 360px;
     background: #ccc;
     overflow: hidden;
-    width: 40%;
+    min-width: 720px;
+    width: 720px;
 }
 .hero__carousel img {
     width: 100%;
@@ -120,7 +123,208 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 50px;
+
 }
+
+@media screen and (max-width: 1700px){
+    
+    .examples {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+
+    }
+    
+    .footer {
+        gap: 40px;
+    }
+
+    .achievements__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .achievements__item{
+        min-width: 320px;
+    }
+
+}
+
+@media screen and (max-width: 1400px){
+    
+    .achievements_page h2 {
+        margin-top: 40px;
+    } 
+
+    .hero__carousel {
+        border-radius: 10px;
+        height: 240px;
+        background: #ccc;
+        overflow: hidden;
+        min-width: 420px;
+        width: 420px;
+    }
+
+    
+    .business__blocks {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+    
+    .footer__filials {
+        flex-wrap: wrap;
+    }
+    
+    .projects__item {
+        flex-direction: column;
+        
+    }
+    .item__information, .item__slider{
+        width: 100% !important; 
+    }
+    .projects__item:nth-child(even) {
+        flex-direction: column !important;
+    }
+
+    .form form {
+        margin-top: 40px;
+        flex-direction: column-reverse;
+        align-items: flex-start !important;
+    }
+
+    .form__inputs{
+        width: 100%;
+    }
+    
+    .big_projects{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+    
+    .achievements__item{
+        width: 100% !important;
+    }
+    .examples {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+
+    .business__block {
+        flex-direction: column;
+    }
+
+    .business__block p {
+        margin-top: 20px;
+        font-weight: 400;
+        height: unset !important;
+        margin-bottom: 40px;
+    }
+    
+    .business__block h3 {
+        margin-bottom: 12px;
+        font-size: 20px;
+        height: unset !important;
+    }
+
+    .footer {
+        grid-template-columns: 1fr !important; 
+        gap: 40px;
+    }
+
+    .form__inputs {
+        flex-direction: column;
+        gap: 20px !important;
+    }
+
+    .form button{
+        margin-top: 20px;
+    }
+
+    .projects_page h2 {
+        padding-top: 80px;
+    }
+
+    .big_projects__list {
+        width: 100% !important;
+    }
+
+    .contacts_page__wrapper {
+        padding-top: 140px;
+    }
+
+    .contacts_page{
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    .contacts_page__wrapper {
+        padding-top: 0 !important;
+    }
+
+    .projects_page{
+        margin-top: 0 !important;
+    }
+
+    .achievements_page {
+        padding-top: 0 !important;
+    }
+
+    .menu{
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .header {
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+    ul {
+        padding-left: 0;
+    }
+    header {
+        padding: 20px 0;
+        width: 100%;
+        position: unset;
+        top: 0;
+        left: 0;
+    }
+    .hero__wrapper {
+        background: none;
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+
+    .hero {
+        word-wrap: break-word;
+    }
+
+    .achievements {
+        flex-direction: column;
+    }
+    .achievements > div {
+        width: 100% !important;
+    } 
+}
+
+
 
 .example__block {
     position: relative;
@@ -255,7 +459,10 @@ section {
     font-weight: 100;
 }
 
-
+.big_projects{
+    display: flex;
+    gap: 40px;
+}
 
 
 
