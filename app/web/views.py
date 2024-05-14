@@ -24,3 +24,7 @@ class DocumentsView(TemplateView):
 class ProjectsView(TemplateView):
     template_name = "projects.html"
     
+
+class PrivacyView(TemplateView):
+    template_name = "privacy.html"
+    

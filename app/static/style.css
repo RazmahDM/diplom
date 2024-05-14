@@ -10,6 +10,10 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+.privacy {
+    padding-top: 120px;
+}
+
 button {
     font-family: inherit;
 }
@@ -22,6 +26,13 @@ p,h1,h2,h3,h4,h5,h6 {
 
 ul,li {
     list-style: none;
+}
+
+.privacy_link {
+    color: #0263BD;
+}
+.privacy_link:hover {
+    color: #2F4DD4;
 }
 
 a {
