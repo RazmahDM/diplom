@@ -13,19 +13,7 @@
         <div class="achievements_page">
             <h2>ВИДЫ РАБОТ, ВЫПОЛНЯЕМЫЕ ИНСТИТУТОМ</h2>
             <div class="projects__list">
-                <div class="projects__item">
-                   <div class="item__information">
-                        <h3>Обустройство Салманского (Утреннего) НГКМ в рамках проекта “Арктик СПГ-2”</h3>
-                        <span>Инвестор: ПАО “НОВАТЭК”
-                            Производительность УКПГ:
-                            - 29,7 млрд. м3/год по товарному газу
-                            - 1,514 млн. т/год по стабильному конденсату</span>
-                        <p>Проект предусматривает строительство трёх технологических линий по производству сжиженного природного газа мощностью 6,6 млн т в год каждая. Общая мощность трех линий составит 19,8 млн т СПГ и до 1,6 млн т стабильного газового конденсата в год.</p>
-                   </div>
-                   <div class="item__slider">
-                        <img src="{% static '/a.png' %}">
-                   </div>
-                </div>
+                {% for project in object_list %}
                 <div class="projects__item">
                     <div class="item__information">
                          <h3>Обустройство Салманского (Утреннего) НГКМ в рамках проекта “Арктик СПГ-2”</h3>
@@ -39,19 +27,7 @@
                          <img src="{% static '/a.png' %}">
                     </div>
                  </div>
-                 <div class="projects__item">
-                    <div class="item__information">
-                         <h3>Обустройство Салманского (Утреннего) НГКМ в рамках проекта “Арктик СПГ-2”</h3>
-                         <span>Инвестор: ПАО “НОВАТЭК”
-                             Производительность УКПГ:
-                             - 29,7 млрд. м3/год по товарному газу
-                             - 1,514 млн. т/год по стабильному конденсату</span>
-                         <p>Проект предусматривает строительство трёх технологических линий по производству сжиженного природного газа мощностью 6,6 млн т в год каждая. Общая мощность трех линий составит 19,8 млн т СПГ и до 1,6 млн т стабильного газового конденсата в год.</p>
-                    </div>
-                    <div class="item__slider">
-                         <img src="{% static '/a.png' %}">
-                    </div>
-                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -59,17 +35,18 @@
 <section class="form">
     <div class="container">
         <h2>Форма для составления заявки</h2>
-        <form>
+        <form method="POST" action="/post/">
+            {% csrf_token %}
             <div>
                 <div class="form__inputs">
                     <div class="l">
                         <h5>Персональные данные</h5>
-                        <input placeholder="Фамилия">
-                        <input placeholder="Имя">
-                        <input placeholder="Отчество">
+                        <input placeholder="Фамилия" name="first_name">
+                        <input placeholder="Имя" name="last_name">
+                        <input placeholder="Отчество" name="middle_name">
                         <h5>Контактные данные</h5>
-                        <input placeholder="+7 ()">
-                        <input placeholder="email@email.com">
+                        <input placeholder="+7 ()" name="phone">
+                        <input placeholder="email@email.com" name="email">
                         <h5>Деятельность</h5>
                         <div class="input_group">
                             <input id="type1" name="type" type="radio">
@@ -79,41 +56,41 @@
                             <input id="type2" name="type" type="radio">
                             <label for="type2">Компания</label>
                         </div>
-                        <textarea placeholder="Вид деятельности" rows="6"></textarea>
+                        <textarea placeholder="Вид деятельности" rows="6" name="kindbusiness"></textarea>
                     </div>
                     <div class="r">
                         <h5>Обращение</h5>
-                        <input placeholder="Тема обращения">
-                        <textarea placeholder="Описание обращения" rows="6"></textarea>
+                        <input placeholder="Тема обращения" name="subject">
+                        <textarea placeholder="Описание обращения" rows="6" name="message"></textarea>
                         <h5>Вид услуг</h5>
                         <div class="input_group">
-                            <input name="service" id="service1" type="checkbox">
+                            <input name="kindservice" id="service1" type="radio">
                             <label for="service1">Концептуальное проектирование</label>
                         </div>
                         <div class="input_group">
-                            <input name="service" id="service2" type="checkbox">
+                            <input name="kindservice" id="service2" type="radio">
                             <label for="service2">Инженерные изыскаяния</label>
                         </div>
                         <div class="input_group">
-                            <input name="service" id="service3" type="checkbox">
+                            <input name="kindservice" id="service3" type="radio">
                             <label for="service3">Сопровождение</label>
                         </div>
                         <div class="input_group">
-                            <input name="service" id="service4" type="checkbox">
+                            <input name="kindservice" id="service4" type="radio">
                             <label for="service4">Строительное проектирование</label>
                         </div>
                         <div class="input_group">
-                            <input name="service" id="service5" type="checkbox">
+                            <input name="kindservice" id="service5" type="radio">
                             <label for="service5">Другое</label>
                         </div>
                     </div>
                 </div>
                 
                 <div class="input_group">
-                    <input id="soglasie" type="checkbox">
+                    <input id="soglasie" type="checkbox" required>
                     <label for="soglasie">Я даю согласие на <a class="privacy_link" href="/privacy">обработку персональных данных</a></label>
                 </div>
-                <button>Отправить на рассмотрение</button>
+                <button type="submit">Отправить на рассмотрение</button>
             </div>
             <div class="form__img">
                 <img src=" {% static 'form.png' %} ">

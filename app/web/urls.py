@@ -10,4 +10,5 @@ urlpatterns = [
     path("services/", views.ServicesView.as_view()),
     path("documents/", views.DocumentsView.as_view()),
     path("privacy/", views.PrivacyView.as_view()),
+    path("post/", views.post),
 ]

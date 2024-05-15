@@ -19,8 +19,8 @@
             <div class="hero__carousel">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="{% static "/carousel/1.png" %}"></div>
-                        <div class="swiper-slide"><img src="{% static "/completed/2.png" %}"></div>
-                        <div class="swiper-slide"><img src="{% static "/completed/3.png" %}"></div>
+                        <div class="swiper-slide"><img src="{% static "/carousel/2.jpg" %}"></div>
+                        <div class="swiper-slide"><img src="{% static "/carousel/3.jpg" %}"></div>
                     </div>
                 
             </div>
@@ -31,22 +31,12 @@
     <div class="container">
         <h2 class="section__title">Примеры готовых работ</h2>
         <div class="examples">
+            {% for ex in object_list %}
             <div class="example__block">
-                <img src="{% static "/completed/1.png" %}">
-                <div class="title">Обустройство Салманского (Утреннего) НГКМ в рамках проекта “Арктик СПГ-2”</div>
+                <img src="{{ex.img.url}}">
+                <div class="title">{{ex.text}}</div>
             </div>
-            <div class="example__block">
-                <img src="{% static "/completed/2.png" %}">
-                <div class="title">Расширение Пунгинского ПХГ</div>
-            </div>
-            <div class="example__block">
-                <img src="{% static "/completed/3.png" %}">
-                <div class="title">Обустройство Верхнетиутейского и Западно-Сеяхинского месторождений в рамках проекта "Обский ГХК"</div>
-            </div>
-            <div class="example__block">
-                <img src="{% static "/completed/4.png" %}">
-                <div class="title">Обустройство Южно-Русского НГМ</div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
